@@ -30,10 +30,6 @@
         },
         items: [
           {
-            value: "england",
-            text: "Every time something changes on GOV.UK"
-          },
-          {
             value: "scotland",
             text: "Once a day, with all the updates made that day (recommended)"
           },
@@ -43,6 +39,33 @@
           }
         ]
       }) }}
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Get updates everytime a change is made
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          {{ govukRadios({
+            idPrefix: "where-do-you-live",
+            name: "where-do-you-live",
+            fieldset: {
+              legend: {
+                text: "You'll recieve an individual email for every change to the topic Money on GOV.UK",
+                isPageHeading: true,
+                classes: "govuk-body"
+              }
+            },
+            items: [
+              {
+                value: "england",
+                text: "Every time something changes on GOV.UK "
+              }
+            ]
+          }) }}
+        </div>
+      </details>
 
       {{ govukInsetText({
         text: "You can unsubscribe from emails or change your subscription at any time."
