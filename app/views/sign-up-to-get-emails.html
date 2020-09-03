@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<!-- {{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }} -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Sign up to get emails
+      </h1>
+
+      <p class="govuk-body">Get emails when information changes on GOV.UK about: Money.</p>
+
+      <p class="govuk-body">There might be 40 to 60 changes a week.</p>
+
+      <p class="govuk-body">You can choose how often you want to receive emails.</p>
+
+      {{ govukButton({
+        text: "Sign up",
+        href: "how-often"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

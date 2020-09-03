@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<!-- <a href="#" class="govuk-back-link" onclick="window.history.back()">Back</a> -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Enter your email address
+      </h1>
+
+      <p>You’re subscribing to get email notifications about: Money. </p>
+
+      <p>You’ll get an email every time a page is added or changed. </p>
+
+      {{ govukInput({
+        label: {
+          text: "What’s your email address?"
+        },
+        id: "email",
+        name: "email",
+        type: "email",
+        autocomplete: "email",
+        spellcheck: false
+      }) }}
+
+
+      {{ govukButton({
+        text: "Continue",
+        href: "check-your-email"
+      }) }}
+
+      <p>We won’t share your email address with anyone. Read our <a href="#">privacy policy (opens in a new tab)</a>. </p>
+
+    </div>
+  </div>
+
+{% endblock %}

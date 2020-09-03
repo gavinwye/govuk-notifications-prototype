@@ -1,0 +1,59 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<!-- <a href="#" class="govuk-back-link" onclick="window.history.back()">Back</a> -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <h1 class="govuk-heading-l">
+        How often do you want to receive emails?
+      </h1> -->
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        idPrefix: "where-do-you-live",
+        name: "where-do-you-live",
+        fieldset: {
+          legend: {
+            text: "How often do you want to receive emails?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "england",
+            text: "Every time something changes on GOV.UK"
+          },
+          {
+            value: "scotland",
+            text: "Once a day, with all the updates made that day (recommended)"
+          },
+          {
+            value: "wales",
+            text: "Once a week, with all the updates made that week"
+          }
+        ]
+      }) }}
+
+      {{ govukInsetText({
+        text: "You can unsubscribe from emails or change your subscription at any time."
+      }) }}
+
+      {{ govukButton({
+        text: "Sign up",
+        href: "email-address"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
