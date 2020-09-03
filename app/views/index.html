@@ -35,7 +35,8 @@
 
 
       {% set moneyHtml %}
-      <p>This will include alerts about all the topics below</p>
+      <p>This will include alerts about all the topics below.</p>
+      <p>There have been an average of 20 changes a day over the last month.</p>
       {% endset -%}
 
       {{ govukRadios({
@@ -61,6 +62,10 @@
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+      {% set expensesAndEmployeeBenefits %}
+      <p>There have been an average of 5 changes a day over the last month.</p>
+      {% endset -%}
+
 {{ govukRadios({
   idPrefix: "where-do-you-live",
   name: "where-do-you-live",
@@ -74,7 +79,10 @@
   items: [
     {
       value: "england",
-      text: "Expenses and employee benefits"
+      text: "Expenses and employee benefits",
+      conditional: {
+        html: expensesAndEmployeeBenefits
+      }
     },
     {
       value: "scotland",
