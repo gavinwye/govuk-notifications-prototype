@@ -18,6 +18,10 @@
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+      {% set numberOfChages %}
+        <p>There might be 40 to 60 changes a day.</p>
+      {% endset -%}
+
       {{ govukRadios({
         idPrefix: "where-do-you-live",
         name: "where-do-you-live",
@@ -31,7 +35,10 @@
         items: [
           {
             value: "england",
-            text: "Every time something changes on GOV.UK"
+            text: "Every time something changes on GOV.UK",
+            conditional: {
+              html: numberOfChages
+            }
           },
           {
             value: "scotland",
@@ -43,6 +50,8 @@
           }
         ]
       }) }}
+
+
 
       {{ govukInsetText({
         text: "You can unsubscribe from emails or change your subscription at any time."
