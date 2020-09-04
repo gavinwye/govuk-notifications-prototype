@@ -1,51 +1,551 @@
-
 {% extends "layout.html" %}
-
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
-
 {% block fullWidth %}
 {% call govukPubInverseHeader({
   fullWidth: true
 }) %}
-
 <div class="gem-c-title gem-c-title--inverse">
-<h1 class="gem-c-title__text ">
-  Education, Training and Skills
-</h1>
+  <h class="gem-c-title__text ">
+    Education, Training and Skills
+  </h>
 </div>
-
 {% endcall %}
 {% endblock %}
-
 {% block content %}
-
 <!-- {{ govukBackLink({
   text: "Back",
   href: "#"
 }) }} -->
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        What do you want to get alerts about?
-      </h1>
-
-
-      {% set moneyHtml %}
-      <p>This will include alerts about all the topics below</p>
-      {% endset -%}
-
-      {{ govukRadios({
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h class="govuk-heading-l">
+      What do you want to get alerts about?
+    </h>
+    {% set moneyHtml %}
+    <p>This will include alerts about all the topics below</p>
+    <ul class="govuk-list">
+      <li><a href="/taxons/accdb-0e-a-b-ecca">Money</a></li>
+      <ul>
+        <li>
+          <a href="/taxons/0e-0ca-0--eabc">Expenses and employee benefits</a>
+        </li>
+        <li>
+          <a href="/taxons/ccf-dba-a-e-cbbc">Court claims, debt and bankruptcy</a>
+        </li>
+        <li>
+          <a href="/taxons/abff--a0c-0ba-eeedccd">Money laundering regulations</a>
+        </li>
+        <ul>
+          <li>
+            <a href="/taxons/ab-ad--bad-ffdaaaa">
+              Registration for specific business types
+            </a>
+          </li>
+          <li>
+            <a href="/taxons/adb0-0f-e-afc-dabbfde">Your role under the regulations</a>
+          </li>
+          <li>
+            <a href="/taxons/dfb-ee-fcc-a-0ccaa">Problems and compliance checks</a>
+          </li>
+        </ul>
+        <li><a href="/taxons/ae-c--ae0-caec0a">Business tax</a>0</li>
+        <ul>
+          <li><a href="/taxons/cb-da-ad-bf-faaafea">Climate Change Levy</a>0</li>
+          <li><a href="/taxons/beec-0b-d-bff-ba0c">Business tax reform</a>0</li>
+          <li><a href="/taxons/e0cac-e-e-d-add0e0fb">VAT</a></li>
+          <ul>
+            <li><a href="/taxons/af-d0-a-a-ece">Accounting for VAT</a></li>
+            <li>
+              <a href="/taxons/affba-d-d-a0e-edbe">Exporting goods and services</a>
+            </li>
+            <li><a href="/taxons/ca-a-0f-a0-cefd00">Paying</a></li>
+            <li><a href="/taxons/ee0-0-cf-cbf-0ef">Exchange rates</a></li>
+            <li>
+              <a href="/taxons/ecb-d-ed-a-eeeee">Overseas businesses and UK VAT</a>
+            </li>
+            <li><a href="/taxons/c0bea-cee-00-be-debeadc">VAT MOSS</a>0</li>
+            <li><a href="/taxons/bfa-ab-a-bf-efc">Charging VAT</a>0</li>
+            <li>
+              <a href="/taxons/efeb0-dd-eb-afdc-eed">Rules for particular trades</a>
+            </li>
+            <li><a href="/taxons/bfa-b-ea-ef-babeabad">VAT returns</a></li>
+            <li>
+              <a href="/taxons/bb--ca-bfc-bde0ada">Importing goods and services</a>
+            </li>
+            <li>
+              <a href="/taxons/eec-df-a-acc-0daabbedb">Reclaiming VAT on a new home</a>
+            </li>
+          </ul>
+          <li><a href="/taxons/0-fa-ee0-ac-d0d">Fuel Duty</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/b0-b0-cd-d-fedb0e0">Moving and storing goods</a>
+            </li>
+            <li>
+              <a href="/taxons/efa0d-ca-adc-b-fb0ddee">
+                Payments and reliefs (Fuel duty)
+              </a>
+            </li>
+          </ul>
+          <li><a href="/taxons/bced-e0-c-b-cb0b0bd">Alcohol duties</a>0</li>
+          <ul>
+            <li>
+              <a href="/taxons/bacd-b00-ba-a-ed">Moving and storing goods</a>
+            </li>
+            <li>
+              <a href="/taxons/dda-de-cf-fe-dbbafff">
+                Payments and reliefs (Alcohol duty)
+              </a>
+            </li>
+          </ul>
+          <li>
+            <a href="/taxons/bf0da-c--eb-ebe">Pension scheme administration</a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/eeb0-c-e0-b-daa">Administering a pension scheme</a>
+            </li>
+            <li><a href="/taxons/de0c-f-a-ad-d0eebcc">Tax on pensions</a>0</li>
+            <li>
+              <a href="/taxons/fd--b0-a-cdfc0">Pension scheme trustees</a>
+              0
+            </li>
+            <li>
+              <a href="/taxons/aad-f--ace-fde">Paying into a pension scheme</a>
+            </li>
+            <li><a href="/taxons/fbca-bd0-b-bcd-ffae0">Overseas schemes</a></li>
+          </ul>
+          <li><a href="/taxons/fbece0-dfc0-db--ddbcffdd">International tax</a>0</li>
+          <ul>
+            <li><a href="/taxons/bdbc-de-c-c-0bbce">Oil and gas</a></li>
+            <li><a href="/taxons/0f0ba0---a-c0a0a">Shipping</a></li>
+            <li><a href="/taxons/da-ce-e-ff-0b00fe">Double taxation</a></li>
+          </ul>
+          <li>
+            <a href="/taxons/cfab-cc---cdce0">
+              Stamp duty and other tax on property
+            </a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/fbfbd-0-b-cdd-e">
+                Stamp Duty before December 00
+              </a>
+            </li>
+            <li><a href="/taxons/d-f-cf-ea-0f0">Pay your SDLT bill</a></li>
+            <li>
+              <a href="/taxons/fea0f-c0--af-ecacc">SDLT on specific transactions</a>
+            </li>
+            <li>
+              <a href="/taxons/dfe-bfc-f-b-aedaee">
+                Annual Tax on Enveloped Dwellings
+              </a>
+            </li>
+            <li><a href="/taxons/cd-f0d-de-ba-bcdfd">Filing a SDLT return</a></li>
+          </ul>
+          <li><a href="/taxons/0-db0-b-ac-fdcaedb0b">Investment schemes</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/eef0fa-c--c-eabfebdd">Collective Investment Schemes</a>
+            </li>
+            <li>
+              <a href="/taxons/a-b--a-dcf">Venture capital
+                schemes</a>
+            </li>
+          </ul>
+          <li><a href="/taxons/ebe0-b-e-a-0fe">Landfill Tax</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/e0b0-b-cf-0-dfefc">
+                Payments and reliefs (landfill tax)
+              </a>
+            </li>
+          </ul>
+          <li><a href="/taxons/0ca--e-b0-addcef">Corporation Tax</a>0</li>
+          <ul>
+            <li>
+              <a href="/taxons/ee-ed-b-aea-e0fdcbe">
+                Preparing accounts for Corporation Tax
+              </a>
+            </li>
+            <li>
+              <a href="/taxons/e0e0-da-fa-bcc-dc0">Changes to your
+                company</a>
+            </li>
+            <li>
+              <a href="/taxons/c-dfb-0a-ae-0ed0">
+                Working out your Corporation Tax
+              </a>
+            </li>
+            <li><a href="/taxons/ac-0f-f-b-ffdaecd">Filing your return</a></li>
+            <li><a href="/taxons/cfbddc-d-a-ede-cbd0">Reliefs</a></li>
+            <li><a href="/taxons/eaa-d-d-aca-fbfabd">Payments and refunds</a></li>
+          </ul>
+          <li><a href="/taxons/ae-fc-b-bde-cd0ffa">Gambling duties</a></li>
+          <ul>
+            <li><a href="/taxons/afeaa-b--ab-baeafac">Bingo Duty</a></li>
+            <li><a href="/taxons/acbcb-be-f-a0-eadcce">Lottery Duty</a></li>
+            <li><a href="/taxons/cedbe-f0-d-0f-cbaaeb0a">Gaming Duty</a></li>
+            <li><a href="/taxons/bb-c--aff-acfccc">Machine Games Duty</a></li>
+            <li>
+              <a href="/taxons/feef-c-00-ff-adbeafee">
+                General Betting Duty, Pool Betting Duty and Remote Gaming Duty
+              </a>
+            </li>
+            <li><a href="/taxons/0-ae-ffd--0feeea">Paying HMRC</a></li>
+          </ul>
+          <li>
+            <a href="/taxons/ed-ba-bca-ae-e00fec">Employment related securities</a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/0fcc--e-e-edbfe">National Insurance transfers</a>
+            </li>
+            <li>
+              <a href="/taxons/aeee-af-e-ca-bd0fdf">Returns and notifications</a>
+            </li>
+            <li><a href="/taxons/beac00-0-c-a-edea0">Asset valuation</a></li>
+            <li><a href="/taxons/eafabd-f00c-ec-bfa-fec0">SAYE bonus rates</a></li>
+          </ul>
+          <li>
+            <a href="/taxons/c-b-bd-bb-bcbecf">
+              Construction Industry Scheme (CIS)
+            </a>
+          </li>
+          <ul>
+            <li><a href="/taxons/cc0b-e-00-b-edeefaa">Contractors</a></li>
+            <li><a href="/taxons/dd-0bcd-0-fd-ffeb">Payments</a></li>
+            <li><a href="/taxons/ac0c-eed-d-f-ceeed00d0">Subcontractors</a></li>
+          </ul>
+          <li><a href="/taxons/cdb-aab--0-feba">Tobacco Products Duty</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/0b0c-ac-b-ad-cbdffac">Moving and storing goods</a>
+              0
+            </li>
+            <li>
+              <a href="/taxons/fcdcd-bbe-fa-edc-0aacdac">
+                Payments and reliefs (tobacco products duty)
+              </a>
+            </li>
+          </ul>
+          <li><a href="/taxons/dbae0e--cd-acc-fbb">Aggregates Levy</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/adc-adf-b-ab-0b0b">
+                Payments and reliefs (aggregates levy)
+              </a>
+            </li>
+          </ul>
+          <li><a href="/taxons/ef00-c-d-bf-dc0b0b">Air Passenger Duty</a></li>
+          <li><a href="/taxons/dccc-ccba-d--cbcedf">Capital allowances</a></li>
+          <li><a href="/taxons/fdfd-f0-ec-c-00c">Stamp duty on shares</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/dbb-da--d-afebdca">Stamp tax on paper shares</a>
+            </li>
+            <li>
+              <a href="/taxons/0bfd-0-c-aa0-d0b">Stamp tax on electronic shares</a>
+            </li>
+          </ul>
+          <li>
+            <a href="/taxons/ee-edf-c-acd-ccbfd">
+              IR: working through an intermediary
+            </a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/dafea---ac0-ebe00fc0">Employment intermediaries</a>
+            </li>
+            <li>
+              <a href="/taxons/babd-d--b00-00aee">Off-payroll working rules</a>
+            </li>
+            <li><a href="/taxons/0a0b-df-bf0-ab-cfdba">Employment status</a></li>
+          </ul>
+          <li><a href="/taxons/dd-dd0-eef-a-ca0">Life insurance policies</a></li>
+          <li><a href="/taxons/f0-ac-cc-afa-cd0d">Insurance Premium Tax</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/efcbb-ee-f-d-eedc">Paying Insurance Premium Tax</a>
+            </li>
+          </ul>
+          <li><a href="/taxons/fe-f0a-dc-fbc-0ddfad">PAYE</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/beac-b-f--eafca">
+                Registering and getting started
+              </a>
+            </li>
+            <li><a href="/taxons/acbbb-ab-d--fda">Paying HMRC</a></li>
+            <li>
+              <a href="/taxons/bcd-bad-fbb-bdf-dae0abb">Annual PAYE and payroll tasks</a>
+            </li>
+            <li>
+              <a href="/taxons/f00fe-a-f-b0cb-d0dce">
+                Employees joining, leaving or changing their circumstances
+              </a>
+            </li>
+            <li><a href="/taxons/0acc-c-ba-0c-dfedbd">Expenses and benefits</a></li>
+            <li>
+              <a href="/taxons/df---baa-aadbcc">
+                Changes to the business that affect PAYE
+              </a>
+            </li>
+            <li>
+              <a href="/taxons/affc-ca-0b-ad-0fdbbcb">Statutory pay and leave</a>
+            </li>
+            <li>
+              <a href="/taxons/de-ae-cd-af-ac00a">Special types of employee pay</a>
+            </li>
+          </ul>
+          <li>
+            <a href="/taxons/a--fa-abab-dee0ed">Large and mid-size business</a>
+          </li>
+          <ul>
+            <li><a href="/taxons/fa0-bee--c-acc">Mid-sized businesses</a></li>
+            <li><a href="/taxons/ee00-f-ac--d">Large businesses</a></li>
+          </ul>
+        </ul>
+        <li><a href="/taxons/b0a-fb-fa-0a-efc">Dealing with HMRC</a></li>
+        <ul>
+          <li><a href="/taxons/afb-c-da--cabdedd">Paying HMRC</a></li>
+          <ul>
+            <li><a href="/taxons/bbea-b0-d0-ba-cfec">Inheritance Tax</a></li>
+            <li><a href="/taxons/a0f-c0-ca-afe-e0cc">Pension schemes</a></li>
+            <li>
+              <a href="/taxons/dab-fa0-be-aa0c-0d0fdfa">Tax credit
+                overpayments</a>
+            </li>
+            <li><a href="/taxons/baff-e-aaf-e-0ec0">Alcohol duties</a></li>
+            <li>
+              <a href="/taxons/abaae0-a-ada-bfb-ecc">Child Benefit overpayments</a>
+            </li>
+            <li><a href="/taxons/c00-da-0--ec0b">Property taxes</a></li>
+            <li><a href="/taxons/aeeeb-bc-d-adad-eddff0fc">Corporation Tax</a></li>
+            <li>
+              <a href="/taxons/0-a0-d-c-fa0d0bbaf">
+                Money laundering regulation fees
+              </a>
+            </li>
+            <li><a href="/taxons/ddece0b-fcd-cd-aa-ae0cbcc">Shares</a></li>
+            <li><a href="/taxons/aa0ba0b-da-bc-c-cca0b">VAT</a></li>
+            <li>
+              <a href="/taxons/0cce-0df-ade--e0e0ca">
+                Transport and environmental duties
+              </a>
+            </li>
+            <li><a href="/taxons/cebe-d--bf0-cccb">Payment problems</a></li>
+            <li>
+              <a href="/taxons/efbc-bd0--fe-ef0fafa">
+                Construction Industry Scheme (through PAYE)
+              </a>
+            </li>
+            <li><a href="/taxons/b0f-af-a0-fc-0ddac">Insurance Premium Tax</a></li>
+            <li><a href="/taxons/0d-f--a0-ecfeaacbad">Capital Gains Tax</a></li>
+            <li>
+              <a href="/taxons/d0-fff-bf-ba-a0ebcf">
+                Income Tax and National Insurance
+              </a>
+            </li>
+            <li><a href="/taxons/cecf-bb-c--bfdfada">Gambling duties</a></li>
+            <li><a href="/taxons/ffccc--0-ba0-0ac">PAYE</a></li>
+          </ul>
+          <li>
+            <a href="/taxons/d0bc-c-f-ae-ee0cf0c">Tax agent and adviser guidance</a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/cebc-ba-a-aba-dedaf0">
+                Working with HMRC - joint initiatives
+              </a>
+            </li>
+            <li><a href="/taxons/ac-c-00b-ab-ffbcfc">Appeals and penalties</a></li>
+            <li><a href="/taxons/eebe-ce-b-df-f00b">Agent authorisation</a></li>
+            <li><a href="/taxons/dfeae-0e-a--b0ddce">Compliance checks</a></li>
+            <li>
+              <a href="/taxons/addce-ab-0a--daef">Money laundering regulations</a>
+            </li>
+          </ul>
+          <li><a href="/taxons/aaa-cef-0-fc-0edf0fe0">Complaints and appeals</a></li>
+          <li><a href="/taxons/0bbe-ad-b-ebf-dfabd0">Phishing and scams</a></li>
+          <li><a href="/taxons/0b0bb-b--ba-cbfb0f">Tax compliance</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/0dfbb-d-ae-be-edae0f">Disclosing offshore income</a>
+            </li>
+            <li><a href="/taxons/b0d-fafe-ee--ecfabde">Reporting tax evasion</a></li>
+            <li>
+              <a href="/taxons/00de-ac-b-cb-be">
+                International agreements and FATCA
+              </a>
+            </li>
+            <li><a href="/taxons/fddf-afa-eaf-ae-ce00cb">Disputes</a></li>
+            <li>
+              <a href="/taxons/fdf-c0-b-f-bcbc">Clearances and approvals</a>
+            </li>
+            <li><a href="/taxons/bffe-a---bffbff">Non-payment and fraud</a></li>
+            <li><a href="/taxons/ffeade-aae-b-acc-0bde">Compliance checks</a></li>
+          </ul>
+          <li><a href="/taxons/acb-bcf-eff-aa-0fe0">Tax avoidance</a>0</li>
+          <ul>
+            <li>
+              <a href="/taxons/00-cc0a-e--deba">Identifying avoidance schemes</a>
+            </li>
+            <li>
+              <a href="/taxons/dee-bd-bb-bed-abdac0">Disclosing avoidance schemes</a>
+            </li>
+            <li>
+              <a href="/taxons/dd0a-f--c-ffb0e">Disguised remuneration schemes</a>
+            </li>
+          </ul>
+          <li><a href="/taxons/d0-fec-dcc-ba-bfc">Shared Workspace service</a></li>
+          <li>
+            <a href="/taxons/dcd0fa-0c0-0-ecb-eddf">Software development for HMRC</a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/dcaea-ac-add-c-ebfaad0">HMRC recognition
+                scheme</a>
+            </li>
+            <li>
+              <a href="/taxons/acc-fd-bd0-a-dffbfa">New to HMRC
+                development</a>
+            </li>
+            <li><a href="/taxons/ce0--0d-be-fdbebbe">Working in partnership</a></li>
+            <li>
+              <a href="/taxons/0fa0-de-ecb-afc-bfcef0">Software development support</a>
+            </li>
+          </ul>
+        </ul>
+        <li><a href="/taxons/aca-0ba-00-bd-eece0dc">Personal tax</a></li>
+        <ul>
+          <li>
+            <a href="/taxons/f-e-ed0-fa-ecabd">
+              Living or working abroad or offshore
+            </a>
+          </li>
+          <ul>
+            <li>
+              <a href="/taxons/acee-0ef-e-bac-d0e0ae">Living and working abroad</a>
+            </li>
+            <li>
+              <a href="/taxons/bb0b-abe--da-ff0f">Rules for specific occupations</a>
+            </li>
+          </ul>
+          <li>
+            <a href="/taxons/bcb-dc-c-abe-dcaba">Tax on savings and investments</a>
+          </li>
+          <ul>
+            <li><a href="/taxons/c0dff-cbb-aa-fc-dede00d">Tax on shares</a></li>
+            <li>
+              <a href="/taxons/afecb-a-b-bd-de">
+                Tax efficient savings and investments
+              </a>
+              0
+            </li>
+            <li><a href="/taxons/fd0f-f-c0-aa-cefd">Tax on savings</a></li>
+            <li>
+              <a href="/taxons/eb-ac-a-bfe-ebbcaeb">
+                Guidance for financial institutions
+              </a>
+              0
+            </li>
+          </ul>
+          <li><a href="/taxons/0fdbcc-ff-c-a0-abe0ccd">Leaving the UK</a></li>
+          <li>
+            <a href="/taxons/0eec-ca-a-b-cd0d">Non-resident landlord scheme</a>
+            0
+          </li>
+          <li><a href="/taxons/dd-c-f-0c-dcb">Trusts</a></li>
+          <li><a href="/taxons/fdae-aba-e0-abbc-beffaa">Inheritance Tax</a></li>
+          <ul>
+            <li><a href="/taxons/bae-d-a-bdec-0abfcae">Wills and probate</a>0</li>
+            <li><a href="/taxons/fafafb-de-0d-bde-fcac0">Reliefs</a></li>
+            <li><a href="/taxons/0a-ae--d0-ffffaf">Working out the tax</a></li>
+            <li><a href="/taxons/ceaa--0d-ef-bb0db">Paying HMRC</a></li>
+          </ul>
+          <li><a href="/taxons/edbba-b0--beee-cbf0b">Self Assessment</a></li>
+          <ul>
+            <li><a href="/taxons/bd0b-fa-b-bc-fdbdeff">Paying your tax bill</a></li>
+            <li>
+              <a href="/taxons/f-d-e-a-daade">Refunds, appeals and penalties</a>
+            </li>
+            <li><a href="/taxons/fb0b-ab--e-aadcf0">Records you must keep</a></li>
+            <li><a href="/taxons/d-b-def--fafc">Filing a tax return</a></li>
+            <li>
+              <a href="/taxons/ebfc-bf--aca-cbaaed">
+                Registering for Self Assessment
+              </a>
+            </li>
+          </ul>
+          <li><a href="/taxons/0ee--0b-0cb-e0">Income Tax</a></li>
+          <ul>
+            <li>
+              <a href="/taxons/ccfad-b-aaf-bdc-e0e00c0a">Rates, allowances and reliefs</a>
+            </li>
+            <li><a href="/taxons/b0ede-b-f-bdd-bcccf">Pensions</a></li>
+            <li>
+              <a href="/taxons/fff-0db-bea-f-cceab">Scottish rate of Income Tax</a>
+            </li>
+            <li><a href="/taxons/a0ecd-e0-c--cffc">Student jobs and loans</a></li>
+            <li>
+              <a href="/taxons/dbba-ece-b0-0-ef0fe">
+                Company benefits and share schemes
+              </a>
+            </li>
+            <li>
+              <a href="/taxons/ad0f--d-0-baea00a">Overpayments and underpayments</a>
+            </li>
+            <li><a href="/taxons/c0fab-0e0-0a-aa-0eebabcca">Special types of pay</a></li>
+            <li>
+              <a href="/taxons/f0c-ac-cdc-0f-de00ec">Welsh rate of Income Tax</a>
+            </li>
+          </ul>
+          <li><a href="/taxons/bcec-fd-c-d0-cbbaabe">Capital Gains Tax</a>0</li>
+          <ul>
+            <li><a href="/taxons/dadd-c0f-f-b0-afeec">Business</a></li>
+            <li><a href="/taxons/becc-0e--0d-eeaceb">Property</a>0</li>
+            <li>
+              <a href="/taxons/aec--a-c-feaa">Shares and investments</a>
+            </li>
+            <li><a href="/taxons/bef--d-ae-add">Personal possessions</a></li>
+            <li><a href="/taxons/cb0a0--bf-beae-fce">Divorce and separation</a></li>
+            <li><a href="/taxons/0ccf-e-0-caa-aad0a">Paying HMRC</a></li>
+          </ul>
+          <li><a href="/taxons/fffcd-0dd--bb-adcda0">Coming to the UK</a></li>
+          <li><a href="/taxons/ccf--a-e-0c0">National Insurance</a></li>
+          <ul>
+            <li><a href="/taxons/-a-a-bd0-eeeca">Refunds</a></li>
+            <li>
+              <a href="/taxons/fefe-ef0--a-ba0fde">National Insurance numbers</a>
+            </li>
+            <li>
+              <a href="/taxons/eaea--fd-f-f0e00f">Voluntary
+                contributions</a>
+            </li>
+            <li><a href="/taxons/ea-bb00-e-c-fdffdcc">Rates and classes</a></li>
+          </ul>
+          <li>
+            <a href="/taxons/-f0-fb-a-fbcaca">Foreign entertainer tax rules</a>
+          </li>
+          <li><a href="/taxons/cd--0-d0-0fcdca">Personal tax reform</a></li>
+        </ul>
+        <li>
+          <a href="/taxons/-c-ba-ed-e0cae0">Tax evasion and avoidance</a>
+        </li>
+      </ul>
+    </ul>
+    {% endset -%}
+    {{ govukRadios({
         idPrefix: "how-contacted-conditional",
         name: "how-contacted",
         fieldset: {
           legend: {
             text: "Everything published to GOV.UK about",
             isPageHeading: true,
-            classes: "govuk-body govuk-!-font-size-24"
+            classes: "govuk-body govuk-!-font-size-"
           }
         },
         items: [
@@ -58,17 +558,15 @@
           }
         ]
       }) }}
-
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {{ govukRadios({
   idPrefix: "where-do-you-live",
   name: "where-do-you-live",
   fieldset: {
     legend: {
-      text: "or only one of the following 7 sub-topics",
+      text: "or only one of the following  sub-topics",
       isPageHeading: true,
-      classes: "govuk-body govuk-!-font-size-24"
+      classes: "govuk-body govuk-!-font-size-"
     }
   },
   items: [
@@ -102,13 +600,10 @@
     }
   ]
 }) }}
-
-      {{ govukButton({
+    {{ govukButton({
         text: "Select",
         href: "sign-up-to-get-emails"
       }) }}
-
-    </div>
   </div>
-
+</div>
 {% endblock %}
