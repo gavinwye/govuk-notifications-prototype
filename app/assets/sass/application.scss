@@ -16,38 +16,13 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/global-bar";
+
+// Utilities
+@import "utilities/overwrites";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-@import "node_modules/@simonwhatley/govuk-publishing-frontend/govuk-pub/all";
 
-.gem-c-inverse-header {
-  width: 100%;
-  background-color: govuk-colour("blue");
-  color: govuk-colour("white");
-  margin-bottom: govuk-spacing(6);
-  padding: 0 govuk-spacing(6) govuk-spacing(6);
-  box-sizing: border-box;
-}
-
-.gem-c-inverse-header a {
-  color: govuk-colour("white");
-}
-
-.gem-c-inverse-header .gem-c-inverse-header__supplement,
-.gem-c-inverse-header .publication-header__last-changed {
-  // This publication-header class is injected on publication pages, really
-  // it should be a component class or be a component in it's own right.
-  @include govuk-font($size: 16, $line-height: 1.5);
-  color: govuk-colour("white");
-  margin: 0;
-}
-
-.gem-c-inverse-header--full-width {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: govuk-spacing(3);
-}
-
-.gem-c-inverse-header--padding-top {
-  padding-top: govuk-spacing(3);
+.govuk-footer--border-top {
+  border-top: 10px solid govuk-colour("blue");
 }
